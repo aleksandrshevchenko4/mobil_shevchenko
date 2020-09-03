@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace mobil_shevchenko
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Valgusfoor2 : ContentPage
+    {
+        public Valgusfoor2()
+        {
+            //InitializeComponent();
+            Label punane = new Label()
+            {
+                Text = "Punane",
+                TextColor = Color.Red,
+                FontSize=30,
+                FontAttributes=FontAttributes.Bold,
+            };
+
+            Frame pun = new Frame()
+            {
+                BackgroundColor = Color.Red,
+                Content = punane,
+                CornerRadius = 50,
+                Margin = new Thickness(5, 0, 5, 0)
+            };
+
+            Label kolane = new Label()
+            {
+                Text = "Kolane",
+                TextColor = Color.Yellow,
+                FontSize = 30,
+                FontAttributes = FontAttributes.Bold,
+            };
+
+            Frame kol = new Frame()
+            {
+                BackgroundColor = Color.Yellow,
+                Content = kolane,
+                CornerRadius = 50,
+                Margin = new Thickness(5, 0, 5, 0)
+            };
+
+            Label roheline = new Label()
+            {
+                Text = "Roheline",
+                TextColor = Color.Green,
+                FontSize = 30,
+                FontAttributes = FontAttributes.Bold,
+            };
+
+            Frame roh = new Frame()
+            {
+                BackgroundColor = Color.Green,
+                Content = roheline,
+                CornerRadius = 50,
+                Margin = new Thickness(5, 0, 5, 0)
+            };
+
+            Button on = new Button()
+            {
+                BackgroundColor = Color.Gray,
+                CornerRadius = 25,
+                Margin = new Thickness(0, 300, 25, 300)
+            };
+
+            Button off = new Button()
+            {
+                BackgroundColor = Color.Gray,
+                CornerRadius = 25,
+                Margin = new Thickness(50, 300, 5, 300)
+            };
+
+            StackLayout stackLayout = new StackLayout()
+            {
+                Children = { pun, kol, roh, on,  }
+            };
+
+            //stackLayout.Orientation = StackOrientation.Horizontal;
+            Content = stackLayout;
+        }
+    }
+}
