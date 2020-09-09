@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobil_shevchenko.Valgusfoor">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame x:Name="frm1" BackgroundColor="Red" CornerRadius="60">
+                <Label x:Name="Red"
+                       Text="Red"/>
+            </Frame>
+            <Frame x:Name="frm2" BackgroundColor="Yellow" CornerRadius="60">
+                <Label x:Name="Yellow"
+                       Text="Yellow"/>
+            </Frame>
+            <Frame x:Name="frm3" BackgroundColor="Green" CornerRadius="60">
+                <Label x:Name="Green"
+                       Text="Green"/>
+            </Frame>
+            <Button x:Name="button" 
+                    Text="Turn off valgusfoor" 
+                    BackgroundColor="#ffff00"
+                    BorderColor="#800080"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="button_Clicked"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+            <Button x:Name="button1" 
+                    Text="Turn on valgusfoor" 
+                    BackgroundColor="#ffff00"
+                    BorderColor="#800080"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="button1_Clicked"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+            <Button x:Name="button2" 
+                    Text="Turn off/on red color" 
+                    BackgroundColor="#ffff00"
+                    BorderColor="#800080"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="button2_Clicked"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+            <Button x:Name="button3" 
+                    Text="Turn off/on yellow color" 
+                    BackgroundColor="#ffff00"
+                    BorderColor="#800080"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="button3_Clicked"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+            <Button x:Name="button4" 
+                    Text="Turn off/on green color" 
+                    BackgroundColor="#ffff00"
+                    BorderColor="#800080"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="button4_Clicked"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+            <Button x:Name="button5" 
+                    Text="Don't working" 
+                    BackgroundColor="#ffff00"
+                    BorderColor="#800080"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="button5_Clicked"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+            <Button x:Name="button6" 
+                    Text="Random color" 
+                    BackgroundColor="#ffff00"
+                    BorderColor="#800080"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="button6_Clicked"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
