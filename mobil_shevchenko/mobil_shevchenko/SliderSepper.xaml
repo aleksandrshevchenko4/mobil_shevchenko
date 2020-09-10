@@ -9,6 +9,19 @@
                 <Stepper x:Name="Stepper1" Minimum="0" Maximum="100" Value="8" Increment="2" ValueChanged="Stepper1_ValueChanged" HorizontalOptions="End"></Stepper>
             </StackLayout>
             <Editor x:Name="Editor1" Text="text" VerticalOptions="FillAndExpand"></Editor>
+            <Frame x:Name="frm4" BackgroundColor="Yellow" CornerRadius="60">
+                <Label x:Name="Random"
+                       Text="Random"/>
+            </Frame>
+            <Button x:Name="button7" 
+                    Text="Random" 
+                    BackgroundColor="#ffff00"
+                    BorderColor="#000"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="button_Clicked"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
