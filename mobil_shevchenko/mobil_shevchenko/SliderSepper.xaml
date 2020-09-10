@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobil_shevchenko.SliderSepper">
+    <ContentPage.Content>
+        <StackLayout Padding="12,12,12,12">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Slider x:Name="Slider1" Minimum="0" Maximum="100" Value="15" ValueChanged="Slider1_ValueChanged" HorizontalOptions="FillAndExpand"></Slider>
+                <Stepper x:Name="Stepper1" Minimum="0" Maximum="100" Value="8" Increment="2" ValueChanged="Stepper1_ValueChanged" HorizontalOptions="End"></Stepper>
+            </StackLayout>
+            <Editor x:Name="Editor1" Text="text" VerticalOptions="FillAndExpand"></Editor>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
