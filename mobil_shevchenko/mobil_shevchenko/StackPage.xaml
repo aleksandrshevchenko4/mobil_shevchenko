@@ -4,26 +4,29 @@
              x:Class="mobil_shevchenko.StackPage">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Label x:Name="lbl" 
-                   Text="Nupp"
+            <Label x:Name="lbl"
+                   Text="Nupp !"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Button x:Name="btn" 
-                Text="Vajuta siia" 
-                BackgroundColor="#55CF2F" 
-                BorderColor="#D00F0F" 
-                BorderWidth="7" 
-                FontSize="Large"
-                Clicked="btn_Clicked"> 
+                    Text="Vajuta siia" 
+                    BackgroundColor="#55CF2F" 
+                    BorderColor="#D00F0F"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="btn_Clicked"
+                    HorizontalOptions="Start">
             </Button>
-            <Button x:Name="btn2" 
-                Text="Vajuta siia" 
-                BackgroundColor="#55002F" 
-                BorderColor="#130F3F" 
-                BorderWidth="7" 
-                FontSize="Large"
-                Clicked="btn2_Clicked">
+            <Button x:Name="btn1"
+                    Text="Vajuta siit ka"
+                    BackgroundColor="#55002F" 
+                    BorderColor="#130F3F"
+                    BorderWidth="7"
+                    FontSize="Large"
+                    Clicked="btn1_Clicked"
+                    HorizontalOptions="End">
             </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+
