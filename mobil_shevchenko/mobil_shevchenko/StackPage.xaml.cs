@@ -19,25 +19,22 @@ namespace mobil_shevchenko
         int clik = 0;
         private void btn_Clicked(object sender, EventArgs e)
         {
-            //btn.Text = "Huraaa!";
+            //btn.Text = "Huraaaa!";
             clik++;
             btn.Text = clik.ToString();
-            if(clik % 5 == 0)
+            if (clik % 5 == 0)
             {
-                //lbl.IsVisible = false;
-                lbl.Text = "";
+                lbl.IsVisible = false;
             }
             else
             {
-                //lbl.IsVisible = true;
-                lbl.Text = "Nupp!";
+                lbl.IsVisible = true;
             }
         }
 
-        private void btn2_Clicked(object sender, EventArgs e)
+        private void btn1_Clicked(object sender, EventArgs e)
         {
             clik = 0;
-            btn.Text = clik.ToString();
         }
     }
 }

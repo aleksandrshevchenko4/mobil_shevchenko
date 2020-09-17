@@ -4,81 +4,47 @@
              x:Class="mobil_shevchenko.Valgusfoor">
     <ContentPage.Content>
         <StackLayout>
-            <Frame x:Name="frm1" BackgroundColor="Red" CornerRadius="60">
-                <Label x:Name="Red"
-                       Text="Red"/>
+            <Frame x:Name="pun" BackgroundColor="Gray" Padding="50" CornerRadius="60" Margin="100,0">
+                <Label x:Name='punane'
+                       Text="punane"
+                       FontSize="Large"
+                       />
             </Frame>
-            <Frame x:Name="frm2" BackgroundColor="Yellow" CornerRadius="60">
-                <Label x:Name="Yellow"
-                       Text="Yellow"/>
+            <Frame x:Name="kol" BackgroundColor="Gray" Padding="50" CornerRadius="60" Margin="100,0">
+                <Label x:Name='kollane'
+                       Text="kollane"
+                       FontSize="Large"
+                       />
             </Frame>
-            <Frame x:Name="frm3" BackgroundColor="Green" CornerRadius="60">
-                <Label x:Name="Green"
-                       Text="Green"/>
+            <Frame x:Name="roh" BackgroundColor="Gray" Padding="50" CornerRadius="60" Margin="100,0">
+                <Label x:Name='roheline'
+                       Text="roheline"
+                       FontSize="Large"
+                       />
             </Frame>
-            <Button x:Name="button" 
-                    Text="Turn off valgusfoor" 
-                    BackgroundColor="#ffff00"
-                    BorderColor="#800080"
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btn" 
+                    Text="ВКЛ" 
+                    BackgroundColor="Green" 
+                    BorderColor="Black"
                     BorderWidth="7"
                     FontSize="Large"
-                    Clicked="button_Clicked"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
-            <Button x:Name="button1" 
-                    Text="Turn on valgusfoor" 
-                    BackgroundColor="#ffff00"
-                    BorderColor="#800080"
+                    Clicked="btn_Clicked"
+                    HorizontalOptions="StartAndExpand">
+                </Button>
+                <Button x:Name="btn1" 
+                    Text="ВЫКЛ" 
+                    BackgroundColor="Red" 
+                    BorderColor="Black"
                     BorderWidth="7"
                     FontSize="Large"
-                    Clicked="button1_Clicked"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
-            <Button x:Name="button2" 
-                    Text="Turn off/on red color" 
-                    BackgroundColor="#ffff00"
-                    BorderColor="#800080"
-                    BorderWidth="7"
-                    FontSize="Large"
-                    Clicked="button2_Clicked"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
-            <Button x:Name="button3" 
-                    Text="Turn off/on yellow color" 
-                    BackgroundColor="#ffff00"
-                    BorderColor="#800080"
-                    BorderWidth="7"
-                    FontSize="Large"
-                    Clicked="button3_Clicked"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
-            <Button x:Name="button4" 
-                    Text="Turn off/on green color" 
-                    BackgroundColor="#ffff00"
-                    BorderColor="#800080"
-                    BorderWidth="7"
-                    FontSize="Large"
-                    Clicked="button4_Clicked"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
-            <Button x:Name="button5" 
-                    Text="Don't working" 
-                    BackgroundColor="#ffff00"
-                    BorderColor="#800080"
-                    BorderWidth="7"
-                    FontSize="Large"
-                    Clicked="button5_Clicked"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
-            <Button x:Name="button6" 
-                    Text="Random color" 
-                    BackgroundColor="#ffff00"
-                    BorderColor="#800080"
-                    BorderWidth="7"
-                    FontSize="Large"
-                    Clicked="button6_Clicked"
-                    VerticalOptions="StartAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
+                    Clicked="btn1_Clicked"
+                    HorizontalOptions="Start">
+                </Button>
+
+            </StackLayout>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -25,7 +25,7 @@
                     BorderColor="#000"
                     BorderWidth="7"
                     FontSize="Large"
-                    Clicked="button_Clicked"
+                    Clicked="button_Clicked">
                     VerticalOptions="StartAndExpand" 
                     HorizontalOptions="StartAndExpand"/>
         </StackLayout>
