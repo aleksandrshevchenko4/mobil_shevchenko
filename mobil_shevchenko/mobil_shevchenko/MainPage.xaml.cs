@@ -5,28 +5,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace mobil_shevchenko
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
-        BoxView box;
-        Button new_game, random_player;
-        public bool first_player;
         public MainPage()
         {
-            First_Player_manual();
-            New_game_Clicked();
+            FirstPlayer_manual();
+            NewGame_Clicked();
         }
+        BoxView box;
+        Label stat;
+        Button newGame, randomPlayer;
+        public bool first_player;
 
-        void New_game_Clicked()
+        void NewGame_Clicked()
         {
             Grid grid = new Grid();
-            for (int i = 0; i < 4; i++)
+            for (int g = 0; g < 4; g++)
             {
                 grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            }
+            for (int f = 0; f < 3; f++)
+            {
                 grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             }
+
+
 
             for (int i = 0; i < 3; i++)
             {
@@ -39,34 +47,32 @@ namespace mobil_shevchenko
                     tap.Tapped += Tap_Tapped;
                 }
             }
-            new_game = new Button { Text = "Новая игра" };
-            grid.Children.Add(new_game, 0, 3);
-            Grid.SetColumnSpan(new_game, 2);
-            random_player = new Button { Text = "Кто первый" };
-            grid.Children.Add(random_player, 2, 3);
-            Grid.SetColumnSpan(random_player, 2);
-            random_player.Clicked += Random_player_Clicked;
+            newGame = new Button { Text = "Кто первый?" };
+
+            grid.Children.Add(newGame, 0, 3);
+            Grid.SetColumnSpan(newGame, 2);
+            randomPlayer = new Button { Text = "Новая игра!" };
+            grid.Children.Add(randomPlayer, 2, 3);
+            Grid.SetColumnSpan(randomPlayer, 2);
+            randomPlayer.Clicked += Randomplayer_Clicked;
             Content = grid;
 
         }
-        private void Random_player_Clicked(object sender, EventArgs e)
+        private void newGame_Clicked(object sender, EventArgs e)
         {
-            First_Player();
-            New_game_Clicked();
+            FirstPlayer_manual();
+            NewGame_Clicked();
+        }
+        private void Randomplayer_Clicked(object sender, EventArgs e)
+        {
+            FirstPlayer();
+            NewGame_Clicked();
         }
         BoxView box_clik;
         private void Tap_Tapped(object sender, EventArgs e)
         {
             {
                 box_clik = sender as BoxView;
-                //if (box.Color == Color.FromRgb(255, 0, 0))
-                //{
-                //    box.Color = Color.FromRgb(0, 255, 0);
-                //}
-                //else
-                //{
-                //    box.Color = Color.FromRgb(255, 0, 0);
-                //}
                 if (box_clik.Color == Color.FromRgb(0, 0, 0) && first_player)
                 {
                     box_clik.Color = Color.FromRgb(255, 0, 0);
@@ -85,7 +91,7 @@ namespace mobil_shevchenko
         }
 
         Random rnd = new Random();
-        private bool First_Player()
+        private bool FirstPlayer()
         {
             int player = rnd.Next(0, 2);
             if (player == 1)
@@ -99,7 +105,7 @@ namespace mobil_shevchenko
             return first_player;
         }
 
-        public async void First_Player_manual()
+        public async void FirstPlayer_manual()
         {
             string first_player_manual = await DisplayPromptAsync("Кто первый?", "Красный -1, Зеленый -2", initialValue: "1", maxLength: 1, keyboard: Keyboard.Numeric);
             if (first_player_manual == "1")
